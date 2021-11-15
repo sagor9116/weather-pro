@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon icon -->
+        <link
+            rel="shortcut icon"
+            href="./icons/png/favicon.png"
+            type="image/x-icon"
+        />
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- fontawesome icon kit -->
+        <script
+            src="https://kit.fontawesome.com/fd242a1d39.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- main stylesheet -->
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Weather Pro</title>
+    </head>
+    <body>
+        <div class="wrapper-bg">
+            <main id="main-section">
+                <section class="current">
+                    <div class="container">
+                        <div class="current-info">
+                            <h1 id="current-time"></h1>
+                            <div class="current-place">
+                                <div class="div">
+                                    <h2 id="current-city"></h2>
+                                    <p id="current-date"></p>
+                                </div>
+                                <div>
+                                    <p class="timezone">Timezone</p>
+                                    <h3 class="current-timezone"></h3>
+                                </div>
+                            </div>
+                            <!-- current-place -->
+
+                            <div class="current-weather-condition">
+                                <div class="current-weather-icon">
+                                    <img
+                                        src="/icons/svg/unknown.svg"
+                                        alt="weather icons"
+                                    />
+                                </div>
+                                <div class="current-weather">
+                                    <p
+                                        id="current-temp"
+                                        class="current-temp"
+                                    ></p>
+                                    <p id="current-sky" class="current-sky"></p>
+                                </div>
+                            </div>
+                            <!-- current-condition -->
+                        </div>
+                        <!-- current-info -->
+                    </div>
+                    <!-- container -->
+                </section>
+                <!-- current -->
+
+                <section class="current-details">
+                    <div class="container">
+                        <div class="flex-row">
+                            <div class="col col-1">
+                                <div class="wind">
+                                    <i class="fas fa-wind"></i>
+                                    <p id="wind"></p>
+                                    <p>Wind</p>
+                                </div>
+                                <!-- wind -->
+
+                                <div class="clouds">
+                                    <i class="fas fa-cloud"></i>
+                                    <p id="clouds"></p>
+                                    <p>Clouds</p>
+                                </div>
+                                <!-- clouds -->
+
+                                <div class="feels-like">
+                                    <i class="fas fa-feather-alt"></i>
+                                    <p id="feels-like"></p>
+                                    <p>Feels like</p>
+                                </div>
+                                <!-- feels-like -->
+                            </div>
+                            <!-- col -->
+
+                            <div class="col col-2">
+                                <div class="visibility">
+                                    <i class="fas fa-eye"></i>
+                                    <p id="visibility"></p>
+                                    <p>Visibility</p>
+                                </div>
+                                <!-- wind -->
+
+                                <div class="pressure">
+                                    <i class="fas fa-compress-arrows-alt"></i>
+                                    <p id="pressure"></p>
+                                    <p>Pressure</p>
+                                </div>
+                                <!-- clouds -->
+
+                                <div class="dew-point">
+                                    <i class="fas fa-tint"></i>
+                                    <p id="dew-point"></p>
+                                    <p>Dew</p>
+                                </div>
+                                <!-- feels-like -->
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- flex-row -->
+                    </div>
+                    <!-- container -->
+                </section>
+                <!-- current-details -->
+
+                <section class="day-details">
+                    <div class="container">
+                        <h2>Day Details</h2>
+                        <div class="grid">
+                            <div class="col">
+                                <div class="upper-border"></div>
+                                <div class="day">
+                                    <h3>Day</h3>
+                                    <p id="day"></p>
+                                </div>
+                                <div class="night">
+                                    <h3>Night</h3>
+                                    <p id="night"></p>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="col">
+                                <div class="upper-border"></div>
+                                <div class="sunrise">
+                                    <h3>Sunrise</h3>
+                                    <div class="sunrise-info">
+                                        <img
+                                            src="./icons/png/sunrise.png"
+                                            alt=""
+                                            id="sunrise"
+                                        />
+                                        <span id="sunrise-txt"></span>
+                                    </div>
+                                </div>
+                                <div class="sunset">
+                                    <h3>Sunset</h3>
+                                    <div class="sunset-info">
+                                        <img
+                                            src="./icons/png/sunset.png"
+                                            alt=""
+                                            id="sunset"
+                                        />
+                                        <span id="sunset-txt"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="col">
+                                <div class="upper-border"></div>
+                                <div class="moonrise">
+                                    <h3>Moonrise</h3>
+                                    <div class="moonrise-info">
+                                        <img
+                                            src="./icons/png/moonrise.png"
+                                            alt=""
+                                        />
+                                        <span id="moonrise-txt"></span>
+                                    </div>
+                                </div>
+                                <div class="moonset">
+                                    <h3>Moonset</h3>
+                                    <div class="moonset-info">
+                                        <img
+                                            src="./icons/png/moonset.png"
+                                            alt=""
+                                        />
+                                        <span id="moonset-txt"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- div -->
+
+                            <div class="col">
+                                <div class="upper-border"></div>
+
+                                <div class="humidity">
+                                    <h3>Humidity</h3>
+                                    <div class="humidity-info">
+                                        <img
+                                            src="./icons/png/humidity.png"
+                                            alt="humidity icon"
+                                        />
+                                        <span id="humidity-txt"></span>
+                                    </div>
+                                </div>
+
+                                <div class="uvi">
+                                    <h3>UVI</h3>
+                                    <div class="uvi-info">
+                                        <img
+                                            src="./icons/png/uv-index.png"
+                                            alt="humidity icon"
+                                        />
+                                        <span id="uvi-txt"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- grid -->
+                    </div>
+                    <!-- container -->
+                </section>
+                <!-- day-details -->
+
+                <section class="hourly-forecast">
+                    <div class="container">
+                        <h2>Hourly Forecast</h2>
+                        <div class="hourly-updated-forecast"></div>
+                    </div>
+                </section>
+
+                <section class="weekly-forecast" id="weekly-forecast">
+                    <div class="container">
+                        <h2>Weekly Forecast</h2>
+                        <div id="future-forecast" class="future-forecast">
+                            <div class="today" id="today"></div>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </section>
+                <!-- weekly-forecast -->
+            </main>
+            <!-- main -->
+            <footer>
+                <p>All rights reserved to &copy;SagorRoy, 2021</p>
+            </footer>
+        </div>
+        <!-- wrapper-bg -->
+
+        <!-- main js -->
+
+        <script src="./js/app.js" type="module"></script>
+        <script src="./js/weather.js" type="module"></script>
+    </body>
+</html>
