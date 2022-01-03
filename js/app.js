@@ -45,52 +45,51 @@ const currentWeatherData = (weatherApiData) => {
     const isDayTime = hours >= 6 && hours < 20;
     console.log(isDayTime);
 
-    // changing the background image according to the weather and time(day/night)
-    switch (weatherMain) {
-        case 'Clear':
-            isDayTime
-                ? (wrapperBg.style.backgroundImage =
-                      "url('/images/day-clear.jpg')")
-                : (wrapperBg.style.backgroundImage =
-                      "url('/images/night-clear.jpg')");
-            break;
+    // changing the background image according to the weather
+    // switch (weatherMain) {
+    //     case 'Clear':
+    //         isDayTime
+    //             ? (wrapperBg.style.backgroundImage =
+    //                   "url('/images/day-clear.jpg')")
+    //             : (wrapperBg.style.backgroundImage =
+    //                   "url('/images/night-clear.jpg')");
+    //         break;
 
-        case 'Thunderstorm':
-            wrapperBg.style.backgroundImage = "url('/images/thunderstorm.jpg')";
-            break;
+    //     case 'Thunderstorm':
+    //         wrapperBg.style.backgroundImage = "url('/images/thunderstorm.jpg')";
+    //         break;
 
-        case 'Drizzle':
-            wrapperBg.style.backgroundImage = "url('/images/day-rain.jpg')";
-            break;
+    //     case 'Drizzle':
+    //         wrapperBg.style.backgroundImage = "url('/images/day-rain.jpg')";
+    //         break;
 
-        case 'Rain':
-            isDayTime
-                ? (wrapperBg.style.backgroundImage =
-                      "url('/images/day-rain.jpg')")
-                : (wrapperBg.style.backgroundImage =
-                      "url('/images/night-rain.jpg')");
-            break;
+    //     case 'Rain':
+    //         isDayTime
+    //             ? (wrapperBg.style.backgroundImage =
+    //                   "url('/images/day-rain.jpg')")
+    //             : (wrapperBg.style.backgroundImage =
+    //                   "url('/images/night-rain.jpg')");
+    //         break;
 
-        case 'Snow':
-            wrapperBg.style.backgroundImage = "url('/images/day-snow.jpg')";
-            break;
+    //     case 'Snow':
+    //         wrapperBg.style.backgroundImage = "url('/images/day-snow.jpg')";
+    //         break;
 
-        case 'Fog':
-            wrapperBg.style.backgroundImage = "url('/images/fog.jpg')";
-            break;
+    //     case 'Fog':
+    //         wrapperBg.style.backgroundImage = "url('/images/fog.jpg')";
+    //         break;
 
-        case 'Clouds':
-            isDayTime
-                ? (wrapperBg.style.backgroundImage =
-                      "url('/images/day-cloud.jpg')")
-                : (wrapperBg.style.backgroundImage =
-                      "url('/images/day-cloud.jpg')");
-            break;
-            break;
+    //     case 'Clouds':
+    //         isDayTime
+    //             ? (wrapperBg.style.backgroundImage =
+    //                   "url('/images/day-cloud.jpg')")
+    //             : (wrapperBg.style.backgroundImage =
+    //                   "url('/images/day-cloud.jpg')");
+    //         break;
 
-        default:
-            break;
-    }
+    //     default:
+    //         break;
+    // }
 
     // get the weather images according to the weather and time(day/night)
     if (weatherMain === 'Thunderstorm') {
